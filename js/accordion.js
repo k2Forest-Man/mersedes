@@ -1,3 +1,4 @@
+const buttonFeatureLinks = document.querySelectorAll('.feature__link'); 
 const listsButton = document.querySelectorAll('.feature-sub'); 
 
 buttonFeatureLinks.forEach((item, index) => {
