@@ -6,4 +6,4 @@ buttonFeatureLinks.forEach((item, index) => {
     item.classList.toggle('feature__link_active')
     listsButton[index].classList.toggle('hidden')
   })
-})
+});
