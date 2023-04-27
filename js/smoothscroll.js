@@ -1,6 +1,7 @@
 const linksHeader = document.querySelectorAll('.menu-list__link');
 const buttonMainScroll = document.querySelector('.main__scroll');
-const arrayLinks = [...linksHeader, buttonMainScroll]; //Спрет оператор??
+const testDriveButton = document.querySelector('.main__button');
+const arrayLinks = [...linksHeader, buttonMainScroll, testDriveButton]; //Спрет оператор??
 
 
 arrayLinks.forEach(itemLink => {
