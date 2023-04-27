@@ -1,5 +1,6 @@
 const tabsHandlerElements = document.querySelectorAll('[data-tabs-handler]');
 const tabsContentElements = document.querySelectorAll('[data-tabs-field]');
+const tabsHeaderElements = document.querySelectorAll('[data-tabs-header]');
 
 for (let button of tabsHandlerElements) {
   //Навешиваем через клик актвный таб
@@ -15,6 +16,16 @@ for (let button of tabsHandlerElements) {
         itemCont.classList.add('hidden');
       }
     })
+
+    //Переключение табов описания заголовков
+    tabsHeaderElements.forEach (itemHeader => {
+      if (itemHeader.dataset.tabsHeader === button.dataset.tabsHandler) {
+        itemHeader.classList.remove('hidden');
+      } else {
+        itemHeader.classList.add('hidden');
+      }
+    })
+
   })
 };
 
