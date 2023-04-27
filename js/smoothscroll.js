@@ -1,3 +1,5 @@
+import { burgerButton, menuActive } from './burger.js';
+
 const linksHeader = document.querySelectorAll('.menu-list__link');
 const buttonMainScroll = document.querySelector('.main__scroll');
 const testDriveButton = document.querySelector('.main__button');
@@ -15,5 +17,10 @@ arrayLinks.forEach(itemLink => {
       behavior: 'smooth',
       block: 'start'
     });
+
+    if (burgerButton && menuActive) {
+      burgerButton.classList.remove('humburger-menu-active');
+      menuActive.remove('menu-active');
+    };
   })
 });
