@@ -18,6 +18,7 @@ arrayLinks.forEach(itemLink => {
       block: 'start'
     });
 
+    //Закрываем бургер меню при клике на любую ссылку в нем
     if (burgerButton && menuActive) {
       burgerButton.classList.remove('humburger-menu-active');
       menuActive.remove('menu-active');
