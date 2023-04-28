@@ -1,5 +1,5 @@
 const mainForm = document.querySelector('.form-test-drive');
-//https://jsonplaceholder.typicode.com
+
 mainForm.addEventListener('submit', (evt) => {
   evt.preventDefault();
 
