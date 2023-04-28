@@ -1,8 +1,10 @@
-const openPopupButton = document.querySelector('.more');
+const arrOpenPopupButton = document.querySelectorAll('.more');
 const modal = document.querySelector('.modal');
 
-openPopupButton.addEventListener('click', () => {
-  modal.classList.remove('hidden');
+arrOpenPopupButton.forEach(itemButton => {
+  itemButton.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+  });
 });
 
 modal.addEventListener('click', (evt) => {

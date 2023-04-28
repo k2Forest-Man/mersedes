@@ -6,6 +6,7 @@ const getToggleMenu = () => {
   burgerButton.classList.toggle('humburger-menu-active');
 };
 
+//Добавляем классы через обработчик
 burgerButton.addEventListener('click', () => getToggleMenu());
 
 export { burgerButton, menuActive};
