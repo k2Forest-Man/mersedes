@@ -5,18 +5,29 @@ mainForm.addEventListener('submit', (evt) => {
 
   let objectData = {};
 
-  for (let {name, value} of mainForm.elements) {
-    
+  for (let { name, value } of mainForm.elements) {
+
     if (name) {
-      objectData[name] = value;
+      objectData[name] = value
     }
   }
 
-  fetch('https://jsonplaceholder.typicode.com/posts').then(response => {
-    if (response.status === 200) {
-      return response.json()
-    }
-  }).then(objectData => {
-    console.log(objectData);
+  fetch('https://jsonplaceholder.typicode.com/posts', { 
+    method: 'POST',
+    body: JSON.stringify(objectData)
   })
+    .then(response => {
+      if (response.status === 200 || response.status === 201) {
+        return response.json()
+      } else {
+        throw new Error(response.status)
+      }
+    })
+    .then(objectData => {
+      alert('Данные успешно сохранены!')
+      mainForm.reset()
+    })
+    .catch(error => {
+      alert('Произошла ошибка, статус ' + error.message)
+    })
 });
