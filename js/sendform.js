@@ -13,6 +13,7 @@ mainForm.addEventListener('submit', (evt) => {
   }
 
   //Отправляем данные формы на сервер
+  //Добавляем вывод ошибокgit 
   fetch('https://jsonplaceholder.typicode.com/posts', { 
     method: 'POST',
     body: JSON.stringify(objectData)
